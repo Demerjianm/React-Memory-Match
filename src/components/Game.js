@@ -42,7 +42,8 @@ class Game extends Component {
   }
 
   render(){
-    console.log(this.state.cards)
+    let cards = this.state
+    
     let { username, gameStarted, gameOver, flipped, icon } = this.state;
     //if(flipped === true)
     //  return <i className={`fa ${icon} fa-5x`} />
