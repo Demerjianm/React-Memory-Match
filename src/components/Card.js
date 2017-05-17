@@ -1,12 +1,14 @@
 import React from 'react';
 
-const Card = ({ updateCard, flipped, matched, icon, index }) => (
-  <div 
-    className='col-xs-3 text-center' 
+const Card = ({ showCard, updateCard, flipped, matched, icon, index }) => (
+  <div
+    onClick={ () => {updateCard(index, flipped), showCard() }}
+    className='col-xs-3 text-center'
     style={{ height: '300px', border: '1px solid black'}}
-  >
-   {/*need a onClick handler on the card div to call updateCard*/}
-   
+    >
+    
+    <i className={`fa ${icon} fa-5x`} />
+
    {/*show icon if flipped or matched*/}
    {/*<i className={`fa ${icon} fa-5x`} />*/}
 
